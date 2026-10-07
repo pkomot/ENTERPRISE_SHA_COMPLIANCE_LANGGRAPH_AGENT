@@ -277,18 +277,21 @@ PAYLOAD = {
 
 async def main() -> None:
     settings = AuditSettings.from_env()
-    mock = MockRegistryServer()                      # omit transport in live mode
+    mock = MockRegistryServer()  # omit transport in live mode
 
     async with ComplianceAuditService(settings, transport=mock.transport()) as svc:
         thread_id = svc.new_thread_id()
 
         async for event in svc.stream_audit(PAYLOAD, thread_id=thread_id):
             match event.kind:
-                case "node_update": print(f"[{event.node}]")
-                case "token":       print(event.data, end="", flush=True)
-                case "interrupt":   print("\nReview needed:", event.data["moratorium_triggers"])
+                case "node_update":
+                    print(f"[{event.node}]")
+                case "token":
+                    print(event.data, end="", flush=True)
+                case "interrupt":
+                    print("\nReview needed:", event.data["moratorium_triggers"])
 
-        if (await svc.get_state(thread_id)).next:    # paused at the inspector gate
+        if (await svc.get_state(thread_id)).next:  # paused at the inspector gate
             decision = InspectorDecision(
                 action="UPHOLD",
                 inspector_id="SHA-INSP-0042",
