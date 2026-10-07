@@ -8,6 +8,7 @@
 ![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-blue)
 ![LangGraph](https://img.shields.io/badge/LangGraph-1.2-1C3C3C)
 ![Pydantic](https://img.shields.io/badge/Pydantic-v2-E92063)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 ![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-D7FF64)
 
 [Quick start](#-quick-start) •
@@ -408,6 +409,10 @@ publishes the Markdown reports to the **job summary** and as an `audit-reports` 
 ## 🤝 Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Report security issues privately as described in [SECURITY.md](SECURITY.md).
+
+## 📄 License
+
+Released under the [MIT License](LICENSE).
 
 ## ⚖️ Disclaimer
 

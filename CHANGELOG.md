@@ -6,6 +6,7 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Added
+- MIT License.
 - README overhaul with Mermaid architecture diagrams, a scoring table and programmatic usage.
 - Contributing guide, security policy, issue and PR templates, Dependabot configuration.
 
