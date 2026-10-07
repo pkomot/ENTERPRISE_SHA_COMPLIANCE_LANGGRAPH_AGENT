@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+reports/
+reports-console.log
+*.sqlite
+*.sqlite-*
+.env
