@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      langchain:
+        patterns: ["langchain*", "langgraph*"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

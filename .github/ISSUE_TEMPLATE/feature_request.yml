@@ -1,0 +1,25 @@
+name: Feature request
+description: Propose a new check, integration or capability
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / motivation
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: input
+    id: regulation
+    attributes:
+      label: Regulatory basis (if any)
+      description: Act, Regulation, Gazette Notice or SHA/DHA circular
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
